@@ -56,9 +56,10 @@ function setup() {
 function draw() {
   background(0);
 
-  drawrain();
 
   drawtime();
+
+  drawrain();
 
   drawlocation();
 
@@ -67,6 +68,7 @@ function draw() {
   drawmoon();
 
   drawcloud();
+
 
 
 }
@@ -316,7 +318,7 @@ function drawrain() {
 
       */
 
-      let colorrainline = map(maxrain, 0, 30, -100, -200);
+      let colorrainline = map(maxrain, 0, 10, -100, -200);
 
       let weatherparse = Date.parse(weathernow);
 
@@ -330,7 +332,7 @@ function drawrain() {
       let weatherdatetime = weatherdate+" "+weathertime;
       let weathertimeparse = Date.parse(weatherdatetime);
 
-      if ((maxrain > 1) && (weatherparse > dateparse) && (weatherparse > weathertimeparse)){
+      if ((maxrain > 1) && (weatherparse < weathertimeparse) && (weatherparse > dateparse)){
 
       background(80,80,80)};
 
