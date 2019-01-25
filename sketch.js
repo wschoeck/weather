@@ -40,15 +40,15 @@ function setup() {
   loadJSON(url, gotLocation);
 
   input = createInput();
-  input.position(20, 65);
+  input.position(50, 50);
 
   input.class("inputfield");
 
   let button = createButton('GO');
 
   button.class("inputbutton");
-  button.position(80, 65);
-  button.position(200, 65);
+  button.position(80, 50);
+  button.position(280, 50);
   button.mousePressed(reloadJson);
 
 }
